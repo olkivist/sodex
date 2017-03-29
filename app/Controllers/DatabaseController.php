@@ -6,11 +6,14 @@ use PDO;
 class DatabaseController extends BaseController {
 
 
-	public function show($request, $response){
+	public function showCourses($request, $response){
 
-		$courses = $this->c->db->query("SELECT * FROM courses")->fetchAll(PDO::FETCH_OBJ);
+		$courses = $this->c->db->query("SELECT * FROM courses WHERE id < 10")->fetchAll(PDO::FETCH_OBJ);
 
-		var_dump($courses);
+
+		return $this->c->view->render($response, 'courses/top-courses.twig', [
+			'courses' => $courses
+		]);
 
 	}
 
@@ -26,13 +29,11 @@ class DatabaseController extends BaseController {
 
 		$course = $course->fetch(PDO::FETCH_OBJ);
 
-		var_dump($course);
-
-
-		// tee oma view courseille
-//		return $this->view->render($response, 'courses/course.twig', [
-//			'course' => $course_name
-//		]);
+ 		return $this->c->view->render($response, 'courses/course-info.twig', [
+ 			'course' => $course
+ 		]);
 	}
+
+
 
 }

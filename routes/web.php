@@ -9,5 +9,5 @@ use App\Controllers\DatabaseController;
 		return $this->view->render($response, 'home.twig');
 	});
 
-	$app->get('/show', DatabaseController::class . ':show')->setName('show');
-	$app->get('/show/{course}', DatabaseController::class .':findCourse');
+	$app->get('/courses', DatabaseController::class . ':showCourses');
+	$app->get('/courses/{course}', DatabaseController::class .':findCourse');
