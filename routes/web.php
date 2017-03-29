@@ -10,3 +10,4 @@ use App\Controllers\DatabaseController;
 	});
 
 	$app->get('/show', DatabaseController::class . ':show')->setName('show');
+	$app->get('/show/{course}', DatabaseController::class .':findCourse');
