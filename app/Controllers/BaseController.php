@@ -15,6 +15,6 @@ use Interop\Container\ContainerInterface;
 
 		protected function render404($response) {
 
-			return $this->c->view->render($response->withStatus(404), 'error-views/404.twig')
+			return $this->c->view->render($response->withStatus(404), 'error-views/404.twig');
 		}
 	}

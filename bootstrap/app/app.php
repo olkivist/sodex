@@ -9,7 +9,7 @@
 	$container = $app->getContainer();	
 
 	$container['db'] = function() {
-		return new PDO('mysql:host=localhost;dbname=logindb', 'user', 'password');
+		return new PDO('mysql:host=localhost;dbname=sodexo_db', 'user', 'password');
 	};
 
 	// Register component on container

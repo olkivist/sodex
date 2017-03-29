@@ -7,9 +7,9 @@ namespace App\Controllers;
 class ExampleController extends BaseController {
 
 
-	public function index($request, $response){
+	public function show($request, $response){
 
-		//
+		return 'show';
 	}
 
 }

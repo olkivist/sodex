@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\User;
-use App\Controllers\BaseController;
+use App\Controllers\DatabaseController;
 
 
 	$app->get('/', function($request, $response) {
@@ -9,7 +9,4 @@ use App\Controllers\BaseController;
 		return $this->view->render($response, 'home.twig');
 	});
 
-	$app->get('/index', function($request, $response) {
-
-		return 'just index';
-	});
+	$app->get('/show', DatabaseController::class . ':show')->setName('show');
