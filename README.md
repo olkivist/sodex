@@ -1,3 +1,3 @@
 ### SODEXO LUNCH ###
 
-Helps to find favourite student food courses from sodexo restaurants around Jyväskylä
+Helps to find favourite food from sodexo restaurants around Jyväskylä
