@@ -1,0 +1,14 @@
+{% extends 'layouts/app.twig' %}
+	
+
+{% block content %}
+
+	<h1>Top Courses</h1>
+
+	<ul>
+    	{% for course in courses %}
+    	    <li>{{ course.course_name }}</li>
+    	{% endfor %}
+	</ul>
+
+{% endblock %}
