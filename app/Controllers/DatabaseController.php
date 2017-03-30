@@ -1,7 +1,12 @@
 <?php
 
 namespace App\Controllers;
+
+
+
 use PDO;
+use App\Models\Course;
+
 
 class DatabaseController extends BaseController {
 
@@ -10,6 +15,9 @@ class DatabaseController extends BaseController {
 
 		$courses = $this->c->db->query("SELECT * FROM courses WHERE id < 10")->fetchAll(PDO::FETCH_OBJ);
 
+//		echo '<pre>';
+//			var_dump($courses);
+//		echo '</pre>';
 
 		return $this->c->view->render($response, 'courses/top-courses.twig', [
 			'courses' => $courses
@@ -34,6 +42,15 @@ class DatabaseController extends BaseController {
  		]);
 	}
 
+	public function showCategories($request, $response){
+
+		$courses = $this->c->db->query("SELECT * FROM courses WHERE id < 10")->fetchAll(PDO::FETCH_CLASS, Course::class);
+
+		return $this->c->view->render($response, 'categories/categories.twig', [
+			'courses' => $courses
+		]);
+
+	}
 
 
 }

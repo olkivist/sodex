@@ -11,3 +11,4 @@ use App\Controllers\DatabaseController;
 
 	$app->get('/courses', DatabaseController::class . ':showCourses');
 	$app->get('/courses/{course}', DatabaseController::class .':findCourse');
+	$app->get('/categories', DatabaseController::class .':showCategories');
