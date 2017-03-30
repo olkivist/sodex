@@ -13,13 +13,17 @@
 
  	<body>
 
-		<div class="container col-md-8 col-md-offset-2">
+	<div class="container">
 
- 			{% block content %}
- 				
- 			{% endblock %}
+ 		<ul class="nav nav-tabs">
+  			<li role="presentation"><a href="{{ path_for('home') }}"><h3>Home</h3></a></li>
+  			<li role="presentation"><a href="{{ path_for('courses') }}"><h3>Ruokalajit</h3></a></li>
+  			<li role="presentation"><a href="{{ path_for('categories') }}"><h3>Kategoriat</h3></a></li>
+		</ul>
 
- 		</div>
+ 			{% block content %}{% endblock %}
+
+ 	</div>
 
  	</body>
 

@@ -2,8 +2,14 @@
 
 {% block title %}Home{% endblock %}
 
-{% block content %}
-	
-	<h2>Home</h2>
+{% block courses %}
+
+	<h3><a href="{{ path_for('courses') }}"> Ruokalajit</a></h3>
+
+{% endblock %}	
+
+{% block categories %}
+
+	<h3><a href="{{ path_for('categories') }}"> Kategoriat</a></h3>
 
 {% endblock %}	
