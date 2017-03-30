@@ -3,12 +3,12 @@
 namespace App\Controllers;
 
 
-
 use PDO;
 use App\Models\Category;
 
 
 class CategoryController extends BaseController {
+
 
 	public function categories($request, $response){
 	
@@ -19,17 +19,13 @@ class CategoryController extends BaseController {
 			return $this->c->view->render($response, 'categories/categories.twig', [
 				'categories' => $parsedCourses
 			]);
+
 	}
 
 	public function show($request, $response, $args){
 
 			$category = $this->c->db->prepare("SELECT course_name FROM courses WHERE category = :category");
-	
-			$category->execute([
-	
-				'category' => $args['category']
-			]);
-	
+			$category->execute(['category' => $args['category']]);
 			$category = $category->fetchAll(PDO::FETCH_COLUMN);
 	
 			$parsedCourses = array_unique($category);
@@ -37,7 +33,6 @@ class CategoryController extends BaseController {
 			 return $this->c->view->render($response, 'categories/category.twig', [
 			 	'courses' => $parsedCourses
 			 ]);
-}
-
-
+	
+	}
 }

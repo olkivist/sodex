@@ -1,7 +1,7 @@
 <?php
 
 use App\Models\User;
-use App\Controllers\DatabaseController;
+use App\Controllers\CourseController;
 use App\Controllers\CategoryController;
 
 
@@ -10,8 +10,8 @@ use App\Controllers\CategoryController;
 		return $this->view->render($response, 'home.twig');
 	});
 
-	$app->get('/courses', DatabaseController::class . ':showCourses');
-	$app->get('/courses/{course}', DatabaseController::class .':findCourse');
+	$app->get('/courses', CourseController::class . ':courses');
+	$app->get('/courses/{course}', CourseController::class .':show')->setName('details.show');
 
 	$app->get('/categories', CategoryController::class .':categories');
 	$app->get('/categories/{category}', CategoryController::class .':show')->setName('courses.show');
