@@ -1,0 +1,15 @@
+{% extends 'layouts/app.twig' %}
+
+
+{% block content %}
+	<div class="courseByCategory">
+	
+	{% for course in courses %}
+	
+			<h4>{{ course }}</h4>
+			
+	{% endfor %}
+	
+	</div>
+{% endblock %}
+

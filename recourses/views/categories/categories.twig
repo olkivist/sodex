@@ -1,9 +1,15 @@
-{% for course in courses %}
+{% extends 'layouts/app.twig' %}
 
-	<div class="category">
+{% block content %}
 
-		<h3>{{ course.getCategory() }}</h3>
-		
-	</div>
+	{% for category in categories %}
+	
+		<div class="category">
+	
+			<h3><a href="{{ path_for('courses.show', { category: category}) }}">{{ category }}</a></h3>
+			
+		</div>
+	
+	{% endfor %}
 
-{% endfor %}
+{% endblock %}
