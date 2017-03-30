@@ -8,6 +8,7 @@
 
 	$container = $app->getContainer();	
 
+	// connection with PDO object
 	$container['db'] = function() {
 		return new PDO('mysql:host=localhost;dbname=sodexo_db', 'user', 'password');
 	};
