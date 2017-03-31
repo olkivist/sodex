@@ -31,6 +31,10 @@ class CourseController extends BaseController {
 
 		$course = $course->fetch(PDO::FETCH_OBJ);
 
+		if ($course === false) {
+			return $this->render404($response);
+		}
+
  		return $this->c->view->render($response, 'courses/course-info.twig', [
  			'course' => $course
  		]);

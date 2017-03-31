@@ -31,7 +31,8 @@ class CategoryController extends BaseController {
 			$parsedCourses = array_unique($category);
 			
 			 return $this->c->view->render($response, 'categories/category.twig', [
-			 	'courses' => $parsedCourses
+			 	'courses' => $parsedCourses,
+			 	'category' => $args['category']
 			 ]);
 	
 	}
