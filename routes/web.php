@@ -1,7 +1,11 @@
 <?php
 
+<<<<<<< HEAD
 use App\Models\User;
 use App\Controllers\CourseController;
+=======
+use App\Controllers\DatabaseController;
+>>>>>>> 3f390fa23584b2e9647b4796d5007685551ddb2e
 use App\Controllers\CategoryController;
 
 
