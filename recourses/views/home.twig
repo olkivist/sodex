@@ -17,11 +17,16 @@
 
 	  <div class="col-md-4">
 	  	<h2>Popular</h2><hr>
+	  	<ul>
+    	{% for course in courses %}
+    	    <li><a href="{{ path_for('details.show', { course: course.course_name }) }}">{{ course.course_name }}</a></li>
+    	{% endfor %}
+	</ul>
 	  </div>
 
 	  <div class="col-md-4">
 	  	<h2>Category</h2><hr>
-	  		
+
 	  </div>
 
 	</div>

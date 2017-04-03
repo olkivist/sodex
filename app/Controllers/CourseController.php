@@ -12,12 +12,11 @@ class CourseController extends BaseController {
 
 	public function courses($request, $response){
 
-		$courses = $this->c->db->query("SELECT * FROM courses")->fetchAll(PDO::FETCH_OBJ);
+		$courses = $this->c->db->query("SELECT * FROM courses WHERE count > 1")->fetchAll(PDO::FETCH_OBJ);
 
 		return $this->c->view->render($response, 'courses/top-courses.twig', [
 			'courses' => $courses
 		]);
-
 	}
 
 	public function show($request, $response, $args) {
@@ -40,4 +39,6 @@ class CourseController extends BaseController {
  		]);
 	
 	}
+
+
 }
