@@ -1,0 +1,7 @@
+{% block testi %}
+
+    {% for course in courses %}
+    	    <h4><a href="{{ path_for('details.show', { course: course.course_name }) }}">{{ course.course_name }}</a></h4>
+    	{% endfor %}
+
+{% endblock %}

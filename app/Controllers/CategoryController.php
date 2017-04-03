@@ -12,9 +12,9 @@ class CategoryController extends BaseController {
 
 	public function categories($request, $response){
 	
-			$courses = $this->c->db->query("SELECT category FROM courses")->fetchAll(PDO::FETCH_COLUMN);
+			$categories = $this->c->db->query("SELECT category FROM courses")->fetchAll(PDO::FETCH_COLUMN);
 
-			$parsedCourses = array_unique($courses);
+			$parsedCourses = array_unique($categories);
 
 			return $this->c->view->render($response, 'categories/categories.twig', [
 				'categories' => $parsedCourses

@@ -1,0 +1,11 @@
+{% block kategoriat %}
+
+	{% for category in categories %}
+	
+		<div class="category">
+	
+			<h4><a href="{{ path_for('courses.show', { category: category}) }}">{{ category }}</a></h4>
+	
+	{% endfor %}
+
+{% endblock %}

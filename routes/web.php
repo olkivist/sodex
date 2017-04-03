@@ -4,14 +4,12 @@
 use App\Models\User;
 use App\Controllers\CourseController;
 use App\Controllers\CategoryController;
+use App\Controllers\HomeController;
 
 
-	$app->get('/', function($request, $response) {
+	$app->get('/', HomeController::class . ':home')->setName('home');
 
-		return $this->view->render($response, 'home.twig');
-	})->setName('home');
-
-	$app->get('/courses', CourseController::class . ':courses')->setName('courses');
+	$app->get('/courses', CourseController::class . ':topcourses')->setName('courses');
 	$app->get('/courses/{course}', CourseController::class .':show')->setName('details.show');
 
 	$app->get('/categories', CategoryController::class .':categories')->setName('categories');

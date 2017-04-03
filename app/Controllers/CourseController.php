@@ -10,7 +10,16 @@ use App\Models\Course;
 class CourseController extends BaseController {
 
 
-	public function courses($request, $response){
+	public function home($request, $response){
+
+		$courses = $this->c->db->query("SELECT * FROM courses WHERE count > 1")->fetchAll(PDO::FETCH_OBJ);
+
+		return $this->c->view->render($response, 'home.twig', [
+			'courses' => $courses
+		]);
+	}
+
+	public function topcourses($request, $response){
 
 		$courses = $this->c->db->query("SELECT * FROM courses WHERE count > 1")->fetchAll(PDO::FETCH_OBJ);
 
