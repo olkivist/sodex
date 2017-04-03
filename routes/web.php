@@ -3,7 +3,6 @@
 
 use App\Models\User;
 use App\Controllers\CourseController;
-use App\Controllers\DatabaseController;
 use App\Controllers\CategoryController;
 
 
@@ -17,3 +16,4 @@ use App\Controllers\CategoryController;
 
 	$app->get('/categories', CategoryController::class .':categories')->setName('categories');
 	$app->get('/categories/{category}', CategoryController::class .':show')->setName('courses.show');
+

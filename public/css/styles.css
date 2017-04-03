@@ -1,0 +1,26 @@
+body {
+	
+	background-color: #a6a6a6;
+	font-family: sans-serif;
+	color: #262626;
+
+}
+
+.navbar {
+	margin-bottom: 3em;
+}
+
+h1 {
+	color: black;
+}
+
+a {
+	color: black;
+}
+
+a:hover {
+	color: white;
+}
+
+
+

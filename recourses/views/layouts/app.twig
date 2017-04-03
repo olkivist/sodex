@@ -7,23 +7,24 @@
  	    <meta name="description" content="Demo project">
  		<meta name="viewport" content="width=device-width, initial-scale=1">
  		<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
- 		<style type="text/css">
-
+ 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+ 		<style type="text/css"> 
  		</style>
  	</head>
 
  	<body>
 
-	<div class="container">
+	<div class="container navbar">
 
  		<ul class="nav nav-tabs">
   			<li role="presentation"><a href="{{ path_for('home') }}"><h3>Home</h3></a></li>
   			<li role="presentation"><a href="{{ path_for('courses') }}"><h3>Ruokalajit</h3></a></li>
   			<li role="presentation"><a href="{{ path_for('categories') }}"><h3>Kategoriat</h3></a></li>
 		</ul>
+	</div>
+	<div class="container">
 
- 			{% block content %}{% endblock %}
- 			{% block error %}{% endblock %}
+			{% block content %}{% endblock %}
 
  	</div>
 

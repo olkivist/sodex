@@ -1,15 +1,30 @@
 {% extends 'layouts/app.twig' %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Sodexo Lunch{% endblock %}
 
-{% block courses %}
 
-	<h3><a href="{{ path_for('courses') }}"> Ruokalajit</a></h3>
+{% block content %}
 
-{% endblock %}	
+	<div class="row">
 
-{% block categories %}
+	  <div class="col-md-4">
+	  	<h2>Lunch Today</h2><hr>
+	  	<h4>Fuuga - Musiikkikampus</h4>
+	  	<h4>Sodexo - Tietotalo</h4>
+	  	<h4>Radis - Pääkampus</h4>
+	  	<h4>Bittipannu - Dynamo</h4>
+	  </div>
 
-	<h3><a href="{{ path_for('categories') }}"> Kategoriat</a></h3>
+	  <div class="col-md-4">
+	  	<h2>Popular</h2><hr>
+	  </div>
 
-{% endblock %}	
+	  <div class="col-md-4">
+	  	<h2>Category</h2><hr>
+	  		
+	  </div>
+
+	</div>
+
+{% endblock %}
+
