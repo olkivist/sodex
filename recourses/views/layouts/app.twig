@@ -14,22 +14,12 @@
 
  	<body>
 
-	<div class="container navbar">
-		<ul class="nav nav-tabs">
-  			<li class="right" role="presentation"><a href="{{ path_for('home') }}"><h3>Home</h3></a></li>
-  			<li class="right" role="presentation"><a href="{{ path_for('courses') }}"><h3>Courses</h3></a></li>
-  			<li class="right" role="presentation"><a href="{{ path_for('categories') }}"><h3>Categories</h3></a></li>
-		</ul>
-	</div>
+ 	{% include 'navigation/nav.twig' %}
 	
-	<div class="container">
-
+		<div class="container">
 			{% block content %}{% endblock %}
-
- 	</div>
+	 	</div>
 
  	</body>
-
- 	<script type="text/javascript"></script>
 
  </html> 

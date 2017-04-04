@@ -7,45 +7,29 @@
 
 <div class="row">
 	<div class="col-md-4">
-		<h2>Lunch Today</h2><hr>
-		<h4>Fuuga - Musiikkikampus</h4>
-		<h4>Sodexo - Tietotalo</h4>
-		<h4>Radis - Pääkampus</h4>
-		<h4>Bittipannu - Dynamo</h4>
-		<h4>Sodexo - Mattilanniemi</h4>
-		<h4>Rajacafé - Pääkampus</h4>
+		{% include 'templates/ravintolat.twig' %}
 	</div>
 
 	<div class="col-md-4">
-	  	<h2>Popular Courses</h2><hr>
 		{% include 'templates/ruokalajit.twig' %}
 	</div>
 
 	<div class="col-md-4">
-	  	<h2>Categories</h2><hr>
 	  	{% include 'templates/kategoriat.twig' %}
 	</div>
 </div>
 
-
 <div class="row">
 	<div class="col-md-4">
-		<h2>My Favourites</h2><hr>
 		{% include 'templates/ruokalajit.twig' %}
 	</div>
 
 	<div class="col-md-4">
-	  	<h2>Restaurant Info</h2><hr>
-		<h4>Fuuga - Musiikkikampus</h4>
-		<h4>Sodexo - Tietotalo</h4>
-		<h4>Radis - Pääkampus</h4>
-		<h4>Bittipannu - Dynamo</h4>
-		<h4>Sodexo - Mattilanniemi</h4>
-		<h4>Rajacafé - Pääkampus</h4>
+		{% include 'templates/ravintolat.twig' %}
 	</div>
 
 	<div class="col-md-4">
-	  	<h2>Comments</h2><hr>
+	  	<h2>Arvostelut</h2><hr>
 	  	<h4>Chatting..</h4>
 	</div>
 </div>
