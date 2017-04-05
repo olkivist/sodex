@@ -10,7 +10,7 @@
 
 	// connection with PDO object
 	$container['db'] = function() {
-		return new PDO('mysql:host=localhost;dbname=sodexo_db', 'user', 'password');
+		return new PDO('mysql:host=localhost;dbname=testi_database', 'user', 'password');
 	};
 
 	// Register component on container
