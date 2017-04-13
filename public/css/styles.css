@@ -5,8 +5,12 @@ body {
 	color: #262626;
 }
 
-.navbar {
-	margin-bottom: 3em;
+.navbar-header {
+	vertical-align: middle;
+}
+
+ul.nav.navbar-nav.navbar-right {
+	margin-right: 0px;
 }
 
 h1 {
