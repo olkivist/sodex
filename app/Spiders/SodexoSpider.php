@@ -5,8 +5,8 @@
 //============================
 
 /*
-*	Tämä luokka hakee sodexo.fi sivustolla olevien ravintoloiden menu-infon ja muuttaa sen
-*	objektitaulukoksi, jossa key on ravintolan nimi ja value on menun sisällön arvot.
+*	Tämä spider hakee sodexo.fi sivustolla olevien ravintoloiden menu-infon ja muuttaa sen
+*	objektitaulukoksi, jossa key on ravintolan nimi ja value on menun sisällön arvot assc arrayna.
 *	Ottaa parametrina taulukon ravintola id numeroista.
 */
 
